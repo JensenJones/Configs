@@ -1,8 +1,8 @@
 # Configs
 
 ## CLion
-
-- TBD plugins/configs
+- usign the zip file of CLion config:
+  - file -> manage IDE settings -> import IDE settings
 
 ## Claude Code
 
