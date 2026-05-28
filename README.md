@@ -1,7 +1,7 @@
 # Configs
 
 ## CLion
-- usign the zip file of CLion config:
+- using the zip file of CLion config:
   - file -> manage IDE settings -> import IDE settings
 
 ## Claude Code
