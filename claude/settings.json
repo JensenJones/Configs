@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr review:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh issue create:*)",
+      "Bash(gh issue comment:*)",
+      "Bash(gh release:*)",
+      "Bash(glab mr create:*)",
+      "Bash(glab mr merge:*)",
+      "Bash(glab mr note:*)"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/.claude/hooks/guard.py\""
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "clangd-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "tui": "fullscreen",
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Casin' the joint, see",
+      "Makin' the code an offer",
+      "Shakin' down the compiler",
+      "Leanin' on the linker, nice and easy",
+      "Cookin' the benchmarks, legit this time",
+      "Greasin' the right cache lines",
+      "Takin' this bug for a ride",
+      "Fittin' the bug for cement shoes",
+      "Layin' low till the build cools off",
+      "Keepin' it in the family, capisce",
+      "Countin' the take, nanosecond by nanosecond",
+      "Runnin' numbers for the boss",
+      "Havin' a quiet word with the allocator",
+      "Tellin' the branch predictor who's boss",
+      "Puttin' the squeeze on the hot path",
+      "Checkin' the books, nothin' personal",
+      "Sendin' the boys round to the test suite",
+      "Stashin' the goods where the feds can't look",
+      "Bustin' out of the debug build",
+      "Payin' respects to the standard, see",
+      "Rubbin' out the dead code",
+      "Wettin' the beak on some cycles",
+      "Makin' sure nobody sings to the logger",
+      "Movin' the merchandise, zero copies",
+      "Fixin' it so it stays fixed, see"
+    ]
+  }
+}
