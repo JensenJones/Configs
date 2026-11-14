@@ -15,7 +15,7 @@ When a task has two reasonable readings and the answer is only in my head (namin
 
 ## Fit the repo before writing
 
-Read the neighbouring files first. Match their naming, error handling, layout, includes and test style, even where you would do it differently. The company's conventions and style guide override everything in this file and in CPP.md.
+Match style from neighbouring code; naming, error handling, layout, includes and test style; unless they are clearly bad practice, then improve upon them. The company's conventions and style guide override everything in this file and in CPP.md.
 
 Use what is already there. Check for an existing helper, container, allocator or utility before writing one, and for an existing dependency before adding one. Never add a third-party dependency without asking.
 
@@ -23,11 +23,9 @@ Use what is already there. Check for an existing helper, container, allocator or
 
 Write the direct version: the shortest correct implementation a stranger can read in one pass, with no layer for a caller who does not exist.
 
-- Pick the right data structure and algorithm up front.
-- No work inside a loop that could happen once outside it.
-- Handle errors where you can act on them. No catch that swallows and continues.
+- Write cleanly written, usually as modern as possible, as fast as possible code.
 - Early return over nested conditionals. Delete dead code, do not comment it out.
-- Keep a change to what was asked. Mention other problems you notice; do not fix them unasked.
+- Keep a change to what was asked. Mention other problems you notice; do not fix them unasked but always worth bringing up for a new PR potentially.
 
 ## Comments
 
@@ -36,6 +34,7 @@ Write the direct version: the shortest correct implementation a stranger can rea
 - One line, above the code. Follow the file's existing doc-comment pattern if it has one.
 - No contextual comments. The code is a final state, not a changelog: never "removed the old X", "fixed the bug where Y", "changed per request".
 - No section banners, no restating the line below.
+- No em dashes.
 
 ## Verify, don't assert
 
