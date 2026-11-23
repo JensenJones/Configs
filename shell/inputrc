@@ -1,0 +1,2 @@
+$include /etc/inputrc
+"\e[3;5~": kill-word

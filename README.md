@@ -17,6 +17,7 @@ Claude reports what is already there, asks before anything a company policy migh
 ## What it sets up
 
 - **jvim**, my Neovim configuration ([JensenVim](https://github.com/JensenJones/JensenVim)), with WezTerm and its key bindings.
+- **Shell**, from `shell/`: ble.sh (command highlighting, history suggestions accepted with Tab, Shift-selection), a starship prompt, bat, eza, delta and a Tokyo Night WezTerm theme.
 - **Herdr** and **rtk**, where they are available.
 - **Claude Code**, from `claude/`:
   - `CLAUDE.md`: how Claude talks to me and works. Concise, asks instead of guessing, fits the existing code, few comments, verifies before reporting.
